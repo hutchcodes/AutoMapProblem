@@ -1,0 +1,18 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace AutoMapProblem.DTO
+{
+    public class CategoryTree
+    {
+        public Guid ProjectId { get; set; }
+        public Guid CategoryId { get; set; }
+        public Guid? ParentCategoryId { get; set; }
+        public int Order { get; set; }
+        public string? Name { get; set; }
+        public List<CategoryTree> Categories { get; set; } = new List<CategoryTree>();
+        public List<CategoryTopicList> Topics { get; set; } = new List<CategoryTopicList>();
+    }
+}
